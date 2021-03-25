@@ -17,6 +17,9 @@
 		EE69FC21260961E100ACA98E /* cryptonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE69FC20260961E100ACA98E /* cryptonUITests.swift */; };
 		EE69FC3B260A865200ACA98E /* CryptoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE69FC3A260A865200ACA98E /* CryptoTableViewController.swift */; };
 		EE69FC40260A86C200ACA98E /* CryptoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE69FC3F260A86C200ACA98E /* CryptoTableViewCell.swift */; };
+		EE8F194C260C183A00246C4B /* CryptoDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F194B260C183A00246C4B /* CryptoDetailsController.swift */; };
+		EE8F1954260C453700246C4B /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1953260C453700246C4B /* APIHandler.swift */; };
+		EE8F195C260C4C6C00246C4B /* APIFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F195B260C4C6C00246C4B /* APIFormat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		EE69FC22260961E100ACA98E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE69FC3A260A865200ACA98E /* CryptoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTableViewController.swift; sourceTree = "<group>"; };
 		EE69FC3F260A86C200ACA98E /* CryptoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTableViewCell.swift; sourceTree = "<group>"; };
+		EE8F194B260C183A00246C4B /* CryptoDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailsController.swift; sourceTree = "<group>"; };
+		EE8F1953260C453700246C4B /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
+		EE8F195B260C4C6C00246C4B /* APIFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFormat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +142,8 @@
 		EE69FC31260961ED00ACA98E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EE8F1953260C453700246C4B /* APIHandler.swift */,
+				EE8F195B260C4C6C00246C4B /* APIFormat.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,6 +162,7 @@
 				EE69FC02260961DC00ACA98E /* ViewController.swift */,
 				EE69FC3A260A865200ACA98E /* CryptoTableViewController.swift */,
 				EE69FC3F260A86C200ACA98E /* CryptoTableViewCell.swift */,
+				EE8F194B260C183A00246C4B /* CryptoDetailsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -290,9 +299,12 @@
 			files = (
 				EE69FC03260961DC00ACA98E /* ViewController.swift in Sources */,
 				EE69FBFF260961DC00ACA98E /* AppDelegate.swift in Sources */,
+				EE8F1954260C453700246C4B /* APIHandler.swift in Sources */,
 				EE69FC3B260A865200ACA98E /* CryptoTableViewController.swift in Sources */,
 				EE69FC40260A86C200ACA98E /* CryptoTableViewCell.swift in Sources */,
+				EE8F195C260C4C6C00246C4B /* APIFormat.swift in Sources */,
 				EE69FC01260961DC00ACA98E /* SceneDelegate.swift in Sources */,
+				EE8F194C260C183A00246C4B /* CryptoDetailsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
