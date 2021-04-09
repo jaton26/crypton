@@ -8,7 +8,8 @@
 import Foundation
 
 protocol APIHandlerDelegate {
-    func getAPIData(_ data: [APIFormat])
+    func getAPIDataForSingleUse(_ data: [APIFormat])
+    func getAPIDataForMultiple(_ data: [APIFormat])
 }
 
 struct APIHandler {
@@ -22,8 +23,14 @@ struct APIHandler {
             
             if let safeData = data {
                 jsonData = getJSON(safeData)
-                if let jsonData = jsonData {
-                    delegate?.getAPIData(jsonData)
+                if var jsonData = jsonData {
+                    jsonData = convertToFloat(&jsonData)
+                    if jsonData.count == 1 {
+                        delegate?.getAPIDataForSingleUse(jsonData)
+                    }
+                    else{
+                        delegate?.getAPIDataForMultiple(jsonData)
+                    }
                 }
             }
             
@@ -41,4 +48,27 @@ struct APIHandler {
         return decoder
         
     }
+    
+    func convertToFloat(_ jsonData: inout [APIFormat]) -> [APIFormat] {
+        var temp: Float = 0
+        for (i,item) in jsonData.enumerated() {
+            temp = Float(item.price)!
+            jsonData[i].price = String(format: "%.2f", temp)
+            
+            temp = Float(item.oneDay.price_change)!
+            jsonData[i].oneDay.price_change = String(format: "%.2f", temp)
+            
+            temp = Float(item.sevenDays.price_change)!
+            jsonData[i].sevenDays.price_change = String(format: "%.2f", temp)
+            
+            temp = Float(item.oneMonth.price_change)!
+            jsonData[i].oneMonth.price_change = String(format: "%.2f", temp)
+            
+            temp = Float(item.oneYear.price_change)!
+            jsonData[i].oneYear.price_change = String(format: "%.2f", temp)
+        }
+        return jsonData
+    }
+    
+    
 }

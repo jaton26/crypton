@@ -11,15 +11,16 @@ struct APIFormat: Codable {
     let id: String
     let symbol: String
     let name: String
-    let price: String
+    var price: String
+    var isPressed: Bool?
     
-    let oneDay: Details
-    let sevenDays: Details
-    let oneMonth: Details
-    let oneYear: Details
+    var oneDay: Details
+    var sevenDays: Details
+    var oneMonth: Details
+    var oneYear: Details
     
     private enum CodingKeys: String, CodingKey{
-        case id, symbol, name, price
+        case id, symbol, name, price, isPressed
         case oneDay = "1d"
         case sevenDays = "7d"
         case oneMonth = "30d"
@@ -28,6 +29,6 @@ struct APIFormat: Codable {
 }
 
 struct Details: Codable {
-    let price_change: String
-    let price_change_pct: String
+    var price_change: String
+    var price_change_pct: String
 }

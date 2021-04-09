@@ -20,6 +20,8 @@
 		EE8F194C260C183A00246C4B /* CryptoDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F194B260C183A00246C4B /* CryptoDetailsController.swift */; };
 		EE8F1954260C453700246C4B /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1953260C453700246C4B /* APIHandler.swift */; };
 		EE8F195C260C4C6C00246C4B /* APIFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F195B260C4C6C00246C4B /* APIFormat.swift */; };
+		EE8F1969260D53E500246C4B /* APIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F1968260D53E500246C4B /* APIData.swift */; };
+		EE8F196E261E767700246C4B /* DataList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F196D261E767700246C4B /* DataList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		EE8F194B260C183A00246C4B /* CryptoDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailsController.swift; sourceTree = "<group>"; };
 		EE8F1953260C453700246C4B /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 		EE8F195B260C4C6C00246C4B /* APIFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFormat.swift; sourceTree = "<group>"; };
+		EE8F1968260D53E500246C4B /* APIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIData.swift; sourceTree = "<group>"; };
+		EE8F196D261E767700246C4B /* DataList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,8 @@
 			children = (
 				EE8F1953260C453700246C4B /* APIHandler.swift */,
 				EE8F195B260C4C6C00246C4B /* APIFormat.swift */,
+				EE8F1968260D53E500246C4B /* APIData.swift */,
+				EE8F196D261E767700246C4B /* DataList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -300,7 +306,9 @@
 				EE69FC03260961DC00ACA98E /* ViewController.swift in Sources */,
 				EE69FBFF260961DC00ACA98E /* AppDelegate.swift in Sources */,
 				EE8F1954260C453700246C4B /* APIHandler.swift in Sources */,
+				EE8F1969260D53E500246C4B /* APIData.swift in Sources */,
 				EE69FC3B260A865200ACA98E /* CryptoTableViewController.swift in Sources */,
+				EE8F196E261E767700246C4B /* DataList.swift in Sources */,
 				EE69FC40260A86C200ACA98E /* CryptoTableViewCell.swift in Sources */,
 				EE8F195C260C4C6C00246C4B /* APIFormat.swift in Sources */,
 				EE69FC01260961DC00ACA98E /* SceneDelegate.swift in Sources */,
