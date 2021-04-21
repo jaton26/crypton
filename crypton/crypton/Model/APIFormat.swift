@@ -13,6 +13,7 @@ struct APIFormat: Codable {
     let name: String
     var price: String
     var isPressed: Bool?
+    var isPositive: Bool?
     
     var oneDay: Details
     var sevenDays: Details

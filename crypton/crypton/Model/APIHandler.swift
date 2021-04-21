@@ -14,6 +14,7 @@ protocol APIHandlerDelegate {
 
 struct APIHandler {
     var delegate: APIHandlerDelegate?
+    var isPressed = false
     
     func getData(_ symbol: String){
         var jsonData: [APIFormat]?
@@ -25,10 +26,14 @@ struct APIHandler {
                 jsonData = getJSON(safeData)
                 if var jsonData = jsonData {
                     jsonData = convertToFloat(&jsonData)
+                    print(jsonData)
                     if jsonData.count == 1 {
                         delegate?.getAPIDataForSingleUse(jsonData)
                     }
                     else{
+                        for (i,_) in jsonData.enumerated(){
+                            jsonData[i].isPressed = true
+                        }
                         delegate?.getAPIDataForMultiple(jsonData)
                     }
                 }
@@ -44,7 +49,16 @@ struct APIHandler {
     
     func getJSON(_ data: Data) -> [APIFormat] {
         
-        let decoder = try! JSONDecoder().decode([APIFormat].self, from: data)
+        var decoder = try! JSONDecoder().decode([APIFormat].self, from: data)
+        
+        // Setting the button color if the symbol is already in the list.
+        if isPressed{
+            decoder[0].isPressed = true
+        }
+        else{
+            decoder[0].isPressed = false
+        }
+        
         return decoder
         
     }
